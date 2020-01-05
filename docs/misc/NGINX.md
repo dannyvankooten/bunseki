@@ -1,14 +1,14 @@
-# Using NGINX with Fathom
+# Using NGINX with Bunseki
 
-Let's say you have the Fathom server listening on port 9000 and want to serve it on your domain, `yourfathom.com`.
+Let's say you have the Bunseki server listening on port 9000 and want to serve it on your domain, `yourbunseki.com`.
 
-We can use NGINX to redirect all traffic for a certain domain to our Fathom application by using the `proxy_pass` directive combined with the port Fathom is listening on. 
+We can use NGINX to redirect all traffic for a certain domain to our Bunseki application by using the `proxy_pass` directive combined with the port Bunseki is listening on. 
 
-Create the following file in `/etc/nginx/sites-enabled/yourfathom.com`
+Create the following file in `/etc/nginx/sites-enabled/yourbunseki.com`
 
 ```
 server {
-	server_name yourfathom.com;
+	server_name yourbunseki.com;
 
 	location / {
 		proxy_set_header X-Real-IP $remote_addr;

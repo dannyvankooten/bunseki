@@ -8,7 +8,7 @@ import (
 func TestShouldCollect(t *testing.T) {
 	r, _ := http.NewRequest("GET", "/", nil)
 	r.Header.Add("User-Agent", "Mozilla/1.0")
-	r.Header.Add("Referer", "http://usefathom.com/")
+	r.Header.Add("Referer", "http://usebunseki.com/")
 	if v := shouldCollect(r); v != false {
 		t.Errorf("Expected %#v, got %#v", true, false)
 	}
@@ -25,13 +25,13 @@ func TestParsePathname(t *testing.T) {
 }
 
 func TestParseHostname(t *testing.T) {
-	e := "https://usefathom.com"
-	if v := parseHostname("https://usefathom.com"); v != e {
+	e := "https://usebunseki.com"
+	if v := parseHostname("https://usebunseki.com"); v != e {
 		t.Errorf("error parsing hostname. expected %#v, got %#v", e, v)
 	}
 
-	e = "http://usefathom.com"
-	if v := parseHostname("http://usefathom.com"); v != e {
+	e = "http://usebunseki.com"
+	if v := parseHostname("http://usebunseki.com"); v != e {
 		t.Errorf("error parsing hostname. expected %#v, got %#v", e, v)
 	}
 }

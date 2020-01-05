@@ -152,7 +152,7 @@ class Dashboard extends Component {
       <header class="section">
         <nav class="main-nav">
             <ul>
-              <li class="logo"><a href="/">{state.site.name || "Fathom"}</a></li>
+              <li class="logo"><a href="/">{state.site.name || "Bunseki"}</a></li>
               <SiteSwitcher sites={state.sites} selectedSite={state.site} onChange={this.changeSelectedSite} onAdd={this.showSiteSettings} showAdd={!state.isPublic}/>
               <Gearwheel onClick={this.showSiteSettings} visible={!state.isPublic} />
               <li class="visitors"><Realtime siteId={state.site.id} /></li>
@@ -181,10 +181,7 @@ class Dashboard extends Component {
           <div class="half">
           <nav>
             <ul>
-              <li><a href="https://usefathom.com/">Fathom</a></li>
-              <li><a href="https://usefathom.com/terms/">Terms of use</a></li>
-              <li><a href="https://usefathom.com/privacy/">Privacy policy</a></li>
-              <li><a href="https://usefathom.com/data/">Our data policy</a></li>
+              <li><a href="https://github.com/dannyvankooten/bunseki">Bunseki</a></li>
               <li><LogoutButton onSuccess={props.onLogout} /></li>
             </ul>
           </nav>

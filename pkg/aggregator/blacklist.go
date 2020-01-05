@@ -22,7 +22,7 @@ func newBlacklist() (*blacklist, error) {
 }
 
 // Has returns true if the given domain appears on the blacklist
-// Uses sub-string matching, so if usesfathom.com is blacklisted then this function will also return true for danny.usesfathom.com
+// Uses sub-string matching, so if usesbunseki.com is blacklisted then this function will also return true for danny.usesbunseki.com
 func (b *blacklist) Has(r string) bool {
 	if r == "" {
 		return false

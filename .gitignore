@@ -5,8 +5,8 @@ coverage.out
 build
 dist
 *.db
-fathom
-!cmd/fathom
+bunseki
+!cmd/bunseki
 
 assets/build
 assets/dist

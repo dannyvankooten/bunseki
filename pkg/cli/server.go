@@ -9,42 +9,42 @@ import (
 	"github.com/urfave/cli"
 
 	"github.com/gorilla/handlers"
-	"github.com/usefathom/fathom/pkg/api"
+	"github.com/dannyvankooten/bunseki/pkg/api"
 	"golang.org/x/crypto/acme/autocert"
 )
 
 var serverCmd = cli.Command{
 	Name:    "server",
 	Aliases: []string{"s"},
-	Usage:   "start the fathom web server",
+	Usage:   "start the bunseki web server",
 	Action:  server,
 	Flags: []cli.Flag{
 		cli.StringFlag{
-			EnvVar: "FATHOM_SERVER_ADDR,PORT",
+			EnvVar: "BUNSEKI_SERVER_ADDR,PORT",
 			Name:   "addr,port",
 			Usage:  "server address",
 			Value:  ":8080",
 		},
 
 		cli.BoolFlag{
-			EnvVar: "FATHOM_LETS_ENCRYPT",
+			EnvVar: "BUNSEKI_LETS_ENCRYPT",
 			Name:   "lets-encrypt",
 		},
 
 		cli.BoolFlag{
-			EnvVar: "FATHOM_GZIP",
+			EnvVar: "BUNSEKI_GZIP",
 			Name:   "gzip",
 			Usage:  "enable gzip compression",
 		},
 
 		cli.StringFlag{
-			EnvVar: "FATHOM_HOSTNAME",
+			EnvVar: "BUNSEKI_HOSTNAME",
 			Name:   "hostname",
 			Usage:  "domain when using --lets-encrypt",
 		},
 
 		cli.BoolFlag{
-			EnvVar: "FATHOM_DEBUG",
+			EnvVar: "BUNSEKI_DEBUG",
 			Name:   "debug, d",
 		},
 	},

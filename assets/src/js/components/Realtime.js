@@ -40,7 +40,7 @@ class Realtime extends Component {
   setDocumentTitle() {
     // update document title
     let visitorText = this.state.count == 1 ? 'visitor' : 'visitors';
-    document.title = ( this.state.count > 0 ? `${numbers.formatPretty(this.state.count)} current ${visitorText} — Fathom` : 'Fathom' );
+    document.title = ( this.state.count > 0 ? `${numbers.formatPretty(this.state.count)} current ${visitorText} — Bunseki` : 'Bunseki' );
   }
 
   @bind 

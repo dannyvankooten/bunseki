@@ -13,7 +13,7 @@ func TestBlacklistHas(t *testing.T) {
 	table := map[string]bool{
 		"03e.info":      true,
 		"zvetki.ru":     true,
-		"usefathom.com": false,
+		"usebunseki.com": false,
 		"foo.03e.info":  true, // sub-string match
 	}
 
